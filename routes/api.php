@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\VisitorController;
 use App\Http\Controllers\User\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -17,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-/** user login Api start */
-// Route::post('/login'.[AuthController::class, 'login']);
+/** Visitor start */
+Route::get('/get-visitor',[VisitorController::class,'GetVisitorDetails']);
 
-/** user login Api end */
+/** Visitor end */
