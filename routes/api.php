@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\SiteInfoController;
 use App\Http\Controllers\Admin\VisitorController;
 use App\Http\Controllers\User\AuthController;
 use Illuminate\Http\Request;
@@ -30,3 +31,7 @@ Route::get('/get-visitor',[VisitorController::class,'GetVisitorDetails']);
 /** Contact page route start */
 Route::post('/post-contact',[ContactController::class, 'PostContactDetails']);
 /** Contact page route end */
+
+/**Site Info Start */
+Route::get('/site-info',[SiteInfoController::class, 'GetSiteinfo']);
+/**Site Info End */
